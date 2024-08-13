@@ -1,5 +1,8 @@
 package com.ofss.main.inb.ServiceRepository;
 
+import com.ofss.main.inb.domain.Account;
+import com.ofss.main.inb.domain.Customer;
+
 public interface AccountService {
-    public String AccountType(int customerId, String accountType, int overdraft_amount);
+    public Account createAccount(String type, Customer customer);
 }

@@ -111,7 +111,7 @@ public class AdminRepoImpl implements AdminRepo{
                 String account_status = resultset.getString("account_status");
                 int overdraft_amount = resultset.getInt("overdraft_amount");
 
-                Account account = new Account(account_id, account_type, account_rate, account_balance, account_minimum_balance, account_status, overdraft_amount);
+                Account account = new Account();
                 accountList.add(account);
             }
 

@@ -2,9 +2,12 @@ package com.ofss.main.inb.Repository;
 
 import java.util.List;
 
-import com.ofss.main.inb.domain.Account;
+// import org.springframework.data.repository.CrudRepository;
 
-public interface AdminRepo {
+import com.ofss.main.inb.domain.Account;
+// import com.ofss.main.inb.domain.Admin;
+
+public interface AdminRepo{
     public String AdminLogin(String AdminLoginID , String Adminpwd);
     public String unblock(String customerLoginId);
 

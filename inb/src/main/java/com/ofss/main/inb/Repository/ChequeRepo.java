@@ -1,5 +1,9 @@
 package com.ofss.main.inb.Repository;
 
-public interface ChequeRepo {
+// import org.springframework.data.repository.CrudRepository;
+
+// import com.ofss.main.inb.domain.Cheque;
+
+public interface ChequeRepo{
 
 }

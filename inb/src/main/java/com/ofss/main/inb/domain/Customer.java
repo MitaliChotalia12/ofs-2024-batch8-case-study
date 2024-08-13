@@ -1,21 +1,59 @@
 package com.ofss.main.inb.domain;
 
-import java.util.List;
+// import java.util.List;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "customer")
 public class Customer {
+
+    public Customer(){
+
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "customer_id")
     private int customerId;
+
+    @Column(name = "customer_name")
     private String customerName;
+
+    @Column(name = "customer_email")
     private String customer_email;
+
+    @Column(name = "customer_login_id")
     private String customerLoginId;
+
+    @Column(name = "customer_password")
     private String customerPassword;
+
+    @Column(name = "customer_phone")
     private String customerPhone;
+
+    @Column(name = "customer_address")
     private String customerAddress;
+
+    @Column(name = "customer_state")
     private String customerState;
+
+    @Column(name = "customer_country")
     private String customerCountry;
+
+    @Column(name = "customer_status")
     private String customerStatus;
+
+    @Column(name = "login_attempts")
     private int loginAttempts;
-    List<Savings> savingAcc;
-    List<Current> currentAcc;
+
+    // List<Savings> savingAcc;
+    // List<Current> currentAcc;
 
 
     
@@ -122,21 +160,21 @@ public class Customer {
         this.loginAttempts = loginAttempts;
     }
 
-    public List<Savings> getSavingAcc() {
-        return savingAcc;
-    }
+    // public List<Savings> getSavingAcc() {
+    //     return savingAcc;
+    // }
 
-    public void setSavingAcc(List<Savings> savingAcc) {
-        this.savingAcc = savingAcc;
-    }
+    // public void setSavingAcc(List<Savings> savingAcc) {
+    //     this.savingAcc = savingAcc;
+    // }
 
-    public List<Current> getCurrentAcc() {
-        return currentAcc;
-    }
+    // public List<Current> getCurrentAcc() {
+    //     return currentAcc;
+    // }
     
-    public void setCurrentAcc(List<Current> currentAcc) {
-        this.currentAcc = currentAcc;
-    }
+    // public void setCurrentAcc(List<Current> currentAcc) {
+    //     this.currentAcc = currentAcc;
+    // }
     
     
 }
