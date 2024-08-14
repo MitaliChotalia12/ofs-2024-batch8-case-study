@@ -52,7 +52,7 @@ public class CustomerServiceImpl implements CustomerService{
     public Customer register(Customer c) {
 
         Customer customer = customerRepo.save(c);
-        Account account = accountService.createAccount("savings", customer);
+        // Account account = accountService.createAccount("savings", customer);
         return customer;
     }
     
