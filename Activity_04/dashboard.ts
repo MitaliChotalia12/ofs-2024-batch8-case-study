@@ -27,7 +27,10 @@ import "ojs/ojknockout-keyset";
   import "oj-c/avatar";
   import "oj-c/list-item-layout";
   import "oj-c/list-view";
-
+  import * as ModuleElementUtils from "ojs/ojmodule-element-utils";
+  import "ojs/ojmodule-element";
+  import "ojs/ojknockout";
+  import "ojs/ojmodule";
 
   
 
@@ -38,6 +41,7 @@ import "ojs/ojknockout-keyset";
     image: string;
   }
 class DashBoardViewModel {
+  ModuleElementUtils;
 
   // firstname: ko.Observable<string> | ko.Observable<any>;
   // lastname: ko.Observable<string> | ko.Observable<any>;
@@ -116,6 +120,17 @@ class DashBoardViewModel {
     EmployeeData["id"],
     EmployeeData
   >(this.data, { keyAttributes: "id" });
+
+  constructor() {
+    // this.value = ko.observable("Green");
+    // initialization
+    // this.firstname = ko.observable(null);
+    // this.salary = ko.observable(null);
+    // this.password = ko.observable(null);
+    // this.date = ko.observable(null);
+    this.ModuleElementUtils = ModuleElementUtils;
+  }
+  
 }
 
 //   public buttonAction = async(event:Event)=>{
@@ -132,12 +147,13 @@ class DashBoardViewModel {
 //   }
 
 // constructor() {
-  // this.value = ko.observable("Green");
-  //initialization
-  // this.firstname = ko.observable(null);
-  // this.salary = ko.observable(null);
-  // this.password = ko.observable(null);
-  // this.date = ko.observable(null);
+//   // this.value = ko.observable("Green");
+//   // initialization
+//   // this.firstname = ko.observable(null);
+//   // this.salary = ko.observable(null);
+//   // this.password = ko.observable(null);
+//   // this.date = ko.observable(null);
+//   this.ModuleElementUtils = ModuleElementUtils;
 // }
 
 // public buttonAction = async(event:Event)=>{
