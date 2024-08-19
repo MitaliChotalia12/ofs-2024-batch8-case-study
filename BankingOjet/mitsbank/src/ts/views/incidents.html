@@ -1,0 +1,100 @@
+<!--
+ Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<!-- <div class="oj-hybrid-padding"></div> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/app.css" />
+  </head>
+  <body>
+    <div id="login-container">
+      <h2>Registration</h2>
+      <form id="loginForm">
+
+        <b>Enter Name</b>
+        <oj-c-input-text
+          id="name-input"
+          value="{{name}}"
+          label-hint="Enter Name"
+          label-edge="inside"
+        ></oj-c-input-text>
+
+
+        <b class="oj-sm-margin-2x-top">Enter Email </b>
+        <oj-c-input-text
+          id="email-input"
+          value="{{email}}"
+          label-hint="Enter Email"
+          label-edge="inside"
+        ></oj-c-input-text>
+
+        <b class="oj-sm-margin-2x-top">Enter Mobile No</b>
+        <oj-c-input-number
+                  value="{{mobileno}}"
+                  label-hint="Enter mobile no"
+                  min="0"
+                  step="0">
+        </oj-c-input-number>
+
+        <b class="oj-sm-margin-2x-top">Enter Address</b>
+        <oj-c-input-text
+          id="address-input"
+          value="{{address}}"
+          label-hint="Enter Address"
+          label-edge="inside"
+        ></oj-c-input-text>
+
+
+        <b class="oj-sm-margin-2x-top">Enter State</b>
+        <oj-c-input-text
+          id="state-input"
+          value="{{state}}"
+          label-hint="Enter State"
+          label-edge="inside"
+        ></oj-c-input-text>
+
+
+        <b class="oj-sm-margin-2x-top">Enter Country</b>
+        <oj-c-input-text
+          id="country-input"
+          value="{{country}}"
+          label-hint="Enter Country"
+          label-edge="inside"
+        ></oj-c-input-text>
+
+        <b class="oj-sm-margin-2x-top">Enter Login Id</b>
+        <oj-c-input-text
+          id="username-input"
+          value="{{username}}"
+          label-hint="Enter Login Id"
+          label-edge="inside"
+        ></oj-c-input-text>
+
+        <b class="oj-sm-margin-2x-top">Enter Password</b>
+        <oj-c-input-password label-hint="Enter Password" value="{{password}}"></oj-c-input-password>
+
+        <!-- <oj-c-button
+          id="button1"
+          class="oj-sm-margin-4x-top"
+          disabled="[[username()==null || username().trim()==='']]"
+          label="Sign In"
+          data-bind="click: register"
+        ></oj-c-button> -->
+        <button type="button" data-bind="click: register">Sign In</button>
+
+        <p class="oj-sm-margin-2x-top" style="padding-left: 18px;">
+          Already have an account?
+          <a href="../views/incidents.html"  >Login here</a>
+        </p>
+
+      </form>
+    </div>
+    <!-- <script src="js/main.js"></script> -->
+    <!-- on-oj-action="[[buttonAction]]" -->
+  </body>
+</html>

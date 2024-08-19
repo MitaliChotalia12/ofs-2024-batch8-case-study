@@ -1,0 +1,62 @@
+<!--
+ Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+ <!-- HTML template for Oracle JET -->
+<!-- <div>
+    <oj-c-form-layout
+      id="formLayoutOptions"
+      max-columns="2"
+      direction="row"
+      user-assistance-density="compact">
+      <h4>Login</h4>
+      <oj-c-input-text
+        id="text-input"
+        value="{{username}}"
+        label-hint="Enter Username"
+        label-edge="inside">
+      </oj-c-input-text>
+      <oj-c-input-password
+        id="enabled1"
+        value="{{password}}"
+        label-hint="Enter Password"
+        label-edge="inside">
+      </oj-c-input-password>
+      <button type="button" data-bind="click: login">Login</button>
+      <p data-bind="text: message, style: messageStyle"></p>
+    </oj-c-form-layout>
+  
+</div> -->
+
+<div class="oj-hybrid-padding">
+  <oj-c-form-layout>
+
+    <h4>Login</h4>
+    <oj-c-input-text
+      id="text-input"
+      value="{{username}}"
+      label-hint="Enter Username"
+      label-edge="inside">
+    </oj-c-input-text>
+    <oj-c-input-password
+      id="enabled1"
+      value="{{password}}"
+      label-hint="Enter Password"
+      label-edge="inside">
+    </oj-c-input-password>
+  </oj-c-form-layout>
+    <button type="button" data-bind="click: login">Login</button>
+    
+    <!-- oj-messages component to display login messages -->
+      <!-- Display Success Message -->
+<div data-bind="if: successMessage">
+  <p style="color: green;" data-bind="text: successMessage"></p>
+</div>
+
+<!-- Display Error Message -->
+<div data-bind="if: errorMessage">
+  <p style="color: red;" data-bind="text: errorMessage"></p>
+</div>
+
+</div>
